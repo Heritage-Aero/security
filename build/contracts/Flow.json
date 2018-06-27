@@ -1,0 +1,1451 @@
+{
+  "contractName": "Flow",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "underflow",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "overflow",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "neverEnds",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x608060405234801561001057600080fd5b5061015a806100206000396000f300608060405260043610610056576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680624264c31461005b578063a24e23061461008c578063dc75bec7146100a3575b600080fd5b34801561006757600080fd5b506100706100d4565b604051808260ff1660ff16815260200191505060405180910390f35b34801561009857600080fd5b506100a16100e5565b005b3480156100af57600080fd5b506100b861011d565b604051808260ff1660ff16815260200191505060405180910390f35b60008060ff90506003810191505090565b60008060006103e8925060009150600090505b828160ff16101561011857818060010192505080806001019150506100f8565b505050565b6000806001905060058103915050905600a165627a7a723058207e69ed81e2a204fb8f362552bbdc0bcb0aa62d4792711cc0c04a01a94770fb790029",
+  "deployedBytecode": "0x608060405260043610610056576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680624264c31461005b578063a24e23061461008c578063dc75bec7146100a3575b600080fd5b34801561006757600080fd5b506100706100d4565b604051808260ff1660ff16815260200191505060405180910390f35b34801561009857600080fd5b506100a16100e5565b005b3480156100af57600080fd5b506100b861011d565b604051808260ff1660ff16815260200191505060405180910390f35b60008060ff90506003810191505090565b60008060006103e8925060009150600090505b828160ff16101561011857818060010192505080806001019150506100f8565b505050565b6000806001905060058103915050905600a165627a7a723058207e69ed81e2a204fb8f362552bbdc0bcb0aa62d4792711cc0c04a01a94770fb790029",
+  "sourceMap": "26:370:17:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;26:370:17;;;;;;;",
+  "deployedSourceMap": "26:370:17:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;149:101;;8:9:-1;5:2;;;30:1;27;20:12;5:2;149:101:17;;;;;;;;;;;;;;;;;;;;;;;;;;;254:140;;8:9:-1;5:2;;;30:1;27;20:12;5:2;254:140:17;;;;;;45:100;;8:9:-1;5:2;;;30:1;27;20:12;5:2;45:100:17;;;;;;;;;;;;;;;;;;;;;;;;;;;149:101;187:5;200:14;217:3;200:20;;244:1;233:8;:12;226:19;;149:101;;:::o;254:140::-;281:14;308:15;338:5;298:4;281:21;;326:1;308:19;;346:1;338:9;;333:57;353:6;349:1;:10;;;333:57;;;374:9;;;;;;;361:3;;;;;;;333:57;;;254:140;;;:::o;45:100::-;84:5;97:14;114:1;97:18;;139:1;128:8;:12;121:19;;45:100;;:::o",
+  "source": "pragma solidity ^0.4.19;\n\ncontract Flow {\n\n  function underflow() constant returns (uint8) {\n    uint8 smallInt = 1;\n    return smallInt - 5;\n  }\n\n  function overflow() constant returns (uint8) {\n    uint8 smallInt = 255;\n    return smallInt + 3;\n  }\n\n  function neverEnds() {\n    uint256 bigInt = 1000;\n    uint256 counter = 0;\n    for (var i = 0; i < bigInt; i++) {\n      counter++;\n    }\n  }\n}",
+  "sourcePath": "/home/hayek/proj/security-exploits/contracts/UnderOverFlow/Flow.sol",
+  "ast": {
+    "absolutePath": "/home/hayek/proj/security-exploits/contracts/UnderOverFlow/Flow.sol",
+    "exportedSymbols": {
+      "Flow": [
+        1104
+      ]
+    },
+    "id": 1105,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1049,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".19"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:17"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 1104,
+        "linearizedBaseContracts": [
+          1104
+        ],
+        "name": "Flow",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 1062,
+              "nodeType": "Block",
+              "src": "91:54:17",
+              "statements": [
+                {
+                  "assignments": [
+                    1055
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 1055,
+                      "name": "smallInt",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 1063,
+                      "src": "97:14:17",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint8",
+                        "typeString": "uint8"
+                      },
+                      "typeName": {
+                        "id": 1054,
+                        "name": "uint8",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "97:5:17",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint8",
+                          "typeString": "uint8"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 1057,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "hexValue": "31",
+                    "id": 1056,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "number",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "114:1:17",
+                    "subdenomination": null,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_rational_1_by_1",
+                      "typeString": "int_const 1"
+                    },
+                    "value": "1"
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "97:18:17"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    },
+                    "id": 1060,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "id": 1058,
+                      "name": "smallInt",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1055,
+                      "src": "128:8:17",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint8",
+                        "typeString": "uint8"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "-",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "hexValue": "35",
+                      "id": 1059,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "139:1:17",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_5_by_1",
+                        "typeString": "int_const 5"
+                      },
+                      "value": "5"
+                    },
+                    "src": "128:12:17",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "functionReturnParameters": 1053,
+                  "id": 1061,
+                  "nodeType": "Return",
+                  "src": "121:19:17"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1063,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "underflow",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1050,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "63:2:17"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 1053,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1052,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1063,
+                  "src": "84:5:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  },
+                  "typeName": {
+                    "id": 1051,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "84:5:17",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "83:7:17"
+            },
+            "scope": 1104,
+            "src": "45:100:17",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1076,
+              "nodeType": "Block",
+              "src": "194:56:17",
+              "statements": [
+                {
+                  "assignments": [
+                    1069
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 1069,
+                      "name": "smallInt",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 1077,
+                      "src": "200:14:17",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint8",
+                        "typeString": "uint8"
+                      },
+                      "typeName": {
+                        "id": 1068,
+                        "name": "uint8",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "200:5:17",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint8",
+                          "typeString": "uint8"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 1071,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "hexValue": "323535",
+                    "id": 1070,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "number",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "217:3:17",
+                    "subdenomination": null,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_rational_255_by_1",
+                      "typeString": "int_const 255"
+                    },
+                    "value": "255"
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "200:20:17"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    },
+                    "id": 1074,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "id": 1072,
+                      "name": "smallInt",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1069,
+                      "src": "233:8:17",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint8",
+                        "typeString": "uint8"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "+",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "hexValue": "33",
+                      "id": 1073,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "244:1:17",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_3_by_1",
+                        "typeString": "int_const 3"
+                      },
+                      "value": "3"
+                    },
+                    "src": "233:12:17",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "functionReturnParameters": 1067,
+                  "id": 1075,
+                  "nodeType": "Return",
+                  "src": "226:19:17"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1077,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "overflow",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1064,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "166:2:17"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 1067,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1066,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1077,
+                  "src": "187:5:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  },
+                  "typeName": {
+                    "id": 1065,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "187:5:17",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "186:7:17"
+            },
+            "scope": 1104,
+            "src": "149:101:17",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1102,
+              "nodeType": "Block",
+              "src": "275:119:17",
+              "statements": [
+                {
+                  "assignments": [
+                    1081
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 1081,
+                      "name": "bigInt",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 1103,
+                      "src": "281:14:17",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      },
+                      "typeName": {
+                        "id": 1080,
+                        "name": "uint256",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "281:7:17",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 1083,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "hexValue": "31303030",
+                    "id": 1082,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "number",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "298:4:17",
+                    "subdenomination": null,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_rational_1000_by_1",
+                      "typeString": "int_const 1000"
+                    },
+                    "value": "1000"
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "281:21:17"
+                },
+                {
+                  "assignments": [
+                    1085
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 1085,
+                      "name": "counter",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 1103,
+                      "src": "308:15:17",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      },
+                      "typeName": {
+                        "id": 1084,
+                        "name": "uint256",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "308:7:17",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 1087,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "hexValue": "30",
+                    "id": 1086,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "number",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "326:1:17",
+                    "subdenomination": null,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_rational_0_by_1",
+                      "typeString": "int_const 0"
+                    },
+                    "value": "0"
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "308:19:17"
+                },
+                {
+                  "body": {
+                    "id": 1100,
+                    "nodeType": "Block",
+                    "src": "366:24:17",
+                    "statements": [
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 1098,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "nodeType": "UnaryOperation",
+                          "operator": "++",
+                          "prefix": false,
+                          "src": "374:9:17",
+                          "subExpression": {
+                            "argumentTypes": null,
+                            "id": 1097,
+                            "name": "counter",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 1085,
+                            "src": "374:7:17",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "id": 1099,
+                        "nodeType": "ExpressionStatement",
+                        "src": "374:9:17"
+                      }
+                    ]
+                  },
+                  "condition": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    },
+                    "id": 1093,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "id": 1091,
+                      "name": "i",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1088,
+                      "src": "349:1:17",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint8",
+                        "typeString": "uint8"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "<",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "id": 1092,
+                      "name": "bigInt",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1081,
+                      "src": "353:6:17",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "349:10:17",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 1101,
+                  "initializationExpression": {
+                    "assignments": [
+                      1088
+                    ],
+                    "declarations": [
+                      {
+                        "constant": false,
+                        "id": 1088,
+                        "name": "i",
+                        "nodeType": "VariableDeclaration",
+                        "scope": 1103,
+                        "src": "338:5:17",
+                        "stateVariable": false,
+                        "storageLocation": "default",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint8",
+                          "typeString": "uint8"
+                        },
+                        "typeName": null,
+                        "value": null,
+                        "visibility": "internal"
+                      }
+                    ],
+                    "id": 1090,
+                    "initialValue": {
+                      "argumentTypes": null,
+                      "hexValue": "30",
+                      "id": 1089,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "346:1:17",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_0_by_1",
+                        "typeString": "int_const 0"
+                      },
+                      "value": "0"
+                    },
+                    "nodeType": "VariableDeclarationStatement",
+                    "src": "338:9:17"
+                  },
+                  "loopExpression": {
+                    "expression": {
+                      "argumentTypes": null,
+                      "id": 1095,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "nodeType": "UnaryOperation",
+                      "operator": "++",
+                      "prefix": false,
+                      "src": "361:3:17",
+                      "subExpression": {
+                        "argumentTypes": null,
+                        "id": 1094,
+                        "name": "i",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1088,
+                        "src": "361:1:17",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint8",
+                          "typeString": "uint8"
+                        }
+                      },
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint8",
+                        "typeString": "uint8"
+                      }
+                    },
+                    "id": 1096,
+                    "nodeType": "ExpressionStatement",
+                    "src": "361:3:17"
+                  },
+                  "nodeType": "ForStatement",
+                  "src": "333:57:17"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1103,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "neverEnds",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1078,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "272:2:17"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 1079,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "275:0:17"
+            },
+            "scope": 1104,
+            "src": "254:140:17",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 1105,
+        "src": "26:370:17"
+      }
+    ],
+    "src": "0:396:17"
+  },
+  "legacyAST": {
+    "absolutePath": "/home/hayek/proj/security-exploits/contracts/UnderOverFlow/Flow.sol",
+    "exportedSymbols": {
+      "Flow": [
+        1104
+      ]
+    },
+    "id": 1105,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1049,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".19"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:17"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 1104,
+        "linearizedBaseContracts": [
+          1104
+        ],
+        "name": "Flow",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 1062,
+              "nodeType": "Block",
+              "src": "91:54:17",
+              "statements": [
+                {
+                  "assignments": [
+                    1055
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 1055,
+                      "name": "smallInt",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 1063,
+                      "src": "97:14:17",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint8",
+                        "typeString": "uint8"
+                      },
+                      "typeName": {
+                        "id": 1054,
+                        "name": "uint8",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "97:5:17",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint8",
+                          "typeString": "uint8"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 1057,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "hexValue": "31",
+                    "id": 1056,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "number",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "114:1:17",
+                    "subdenomination": null,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_rational_1_by_1",
+                      "typeString": "int_const 1"
+                    },
+                    "value": "1"
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "97:18:17"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    },
+                    "id": 1060,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "id": 1058,
+                      "name": "smallInt",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1055,
+                      "src": "128:8:17",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint8",
+                        "typeString": "uint8"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "-",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "hexValue": "35",
+                      "id": 1059,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "139:1:17",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_5_by_1",
+                        "typeString": "int_const 5"
+                      },
+                      "value": "5"
+                    },
+                    "src": "128:12:17",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "functionReturnParameters": 1053,
+                  "id": 1061,
+                  "nodeType": "Return",
+                  "src": "121:19:17"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1063,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "underflow",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1050,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "63:2:17"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 1053,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1052,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1063,
+                  "src": "84:5:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  },
+                  "typeName": {
+                    "id": 1051,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "84:5:17",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "83:7:17"
+            },
+            "scope": 1104,
+            "src": "45:100:17",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1076,
+              "nodeType": "Block",
+              "src": "194:56:17",
+              "statements": [
+                {
+                  "assignments": [
+                    1069
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 1069,
+                      "name": "smallInt",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 1077,
+                      "src": "200:14:17",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint8",
+                        "typeString": "uint8"
+                      },
+                      "typeName": {
+                        "id": 1068,
+                        "name": "uint8",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "200:5:17",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint8",
+                          "typeString": "uint8"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 1071,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "hexValue": "323535",
+                    "id": 1070,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "number",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "217:3:17",
+                    "subdenomination": null,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_rational_255_by_1",
+                      "typeString": "int_const 255"
+                    },
+                    "value": "255"
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "200:20:17"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    },
+                    "id": 1074,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "id": 1072,
+                      "name": "smallInt",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1069,
+                      "src": "233:8:17",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint8",
+                        "typeString": "uint8"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "+",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "hexValue": "33",
+                      "id": 1073,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "244:1:17",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_3_by_1",
+                        "typeString": "int_const 3"
+                      },
+                      "value": "3"
+                    },
+                    "src": "233:12:17",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "functionReturnParameters": 1067,
+                  "id": 1075,
+                  "nodeType": "Return",
+                  "src": "226:19:17"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1077,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "overflow",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1064,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "166:2:17"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 1067,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1066,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1077,
+                  "src": "187:5:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  },
+                  "typeName": {
+                    "id": 1065,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "187:5:17",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "186:7:17"
+            },
+            "scope": 1104,
+            "src": "149:101:17",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1102,
+              "nodeType": "Block",
+              "src": "275:119:17",
+              "statements": [
+                {
+                  "assignments": [
+                    1081
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 1081,
+                      "name": "bigInt",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 1103,
+                      "src": "281:14:17",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      },
+                      "typeName": {
+                        "id": 1080,
+                        "name": "uint256",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "281:7:17",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 1083,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "hexValue": "31303030",
+                    "id": 1082,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "number",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "298:4:17",
+                    "subdenomination": null,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_rational_1000_by_1",
+                      "typeString": "int_const 1000"
+                    },
+                    "value": "1000"
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "281:21:17"
+                },
+                {
+                  "assignments": [
+                    1085
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 1085,
+                      "name": "counter",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 1103,
+                      "src": "308:15:17",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      },
+                      "typeName": {
+                        "id": 1084,
+                        "name": "uint256",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "308:7:17",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 1087,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "hexValue": "30",
+                    "id": 1086,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "number",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "326:1:17",
+                    "subdenomination": null,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_rational_0_by_1",
+                      "typeString": "int_const 0"
+                    },
+                    "value": "0"
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "308:19:17"
+                },
+                {
+                  "body": {
+                    "id": 1100,
+                    "nodeType": "Block",
+                    "src": "366:24:17",
+                    "statements": [
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 1098,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "nodeType": "UnaryOperation",
+                          "operator": "++",
+                          "prefix": false,
+                          "src": "374:9:17",
+                          "subExpression": {
+                            "argumentTypes": null,
+                            "id": 1097,
+                            "name": "counter",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 1085,
+                            "src": "374:7:17",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "id": 1099,
+                        "nodeType": "ExpressionStatement",
+                        "src": "374:9:17"
+                      }
+                    ]
+                  },
+                  "condition": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    },
+                    "id": 1093,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "id": 1091,
+                      "name": "i",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1088,
+                      "src": "349:1:17",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint8",
+                        "typeString": "uint8"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "<",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "id": 1092,
+                      "name": "bigInt",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1081,
+                      "src": "353:6:17",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "349:10:17",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 1101,
+                  "initializationExpression": {
+                    "assignments": [
+                      1088
+                    ],
+                    "declarations": [
+                      {
+                        "constant": false,
+                        "id": 1088,
+                        "name": "i",
+                        "nodeType": "VariableDeclaration",
+                        "scope": 1103,
+                        "src": "338:5:17",
+                        "stateVariable": false,
+                        "storageLocation": "default",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint8",
+                          "typeString": "uint8"
+                        },
+                        "typeName": null,
+                        "value": null,
+                        "visibility": "internal"
+                      }
+                    ],
+                    "id": 1090,
+                    "initialValue": {
+                      "argumentTypes": null,
+                      "hexValue": "30",
+                      "id": 1089,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "346:1:17",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_0_by_1",
+                        "typeString": "int_const 0"
+                      },
+                      "value": "0"
+                    },
+                    "nodeType": "VariableDeclarationStatement",
+                    "src": "338:9:17"
+                  },
+                  "loopExpression": {
+                    "expression": {
+                      "argumentTypes": null,
+                      "id": 1095,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "nodeType": "UnaryOperation",
+                      "operator": "++",
+                      "prefix": false,
+                      "src": "361:3:17",
+                      "subExpression": {
+                        "argumentTypes": null,
+                        "id": 1094,
+                        "name": "i",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1088,
+                        "src": "361:1:17",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint8",
+                          "typeString": "uint8"
+                        }
+                      },
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint8",
+                        "typeString": "uint8"
+                      }
+                    },
+                    "id": 1096,
+                    "nodeType": "ExpressionStatement",
+                    "src": "361:3:17"
+                  },
+                  "nodeType": "ForStatement",
+                  "src": "333:57:17"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1103,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "neverEnds",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1078,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "272:2:17"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 1079,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "275:0:17"
+            },
+            "scope": 1104,
+            "src": "254:140:17",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 1105,
+        "src": "26:370:17"
+      }
+    ],
+    "src": "0:396:17"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.23+commit.124ca40d.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "2.0.0",
+  "updatedAt": "2018-06-24T04:16:54.715Z"
+}
